@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="InventorySystem.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="C:\Users\Ben\Desktop\UIC\2nd Year first Sem\CC213 Systems Integration and Architecture\SIA_inventorySystem\sia\login\InventorySystem.js"></script>
+
+    <title>StateMaster</title>
+    
+</head>
+<body>
+    <header>
+      <h2>StateMaster</h2>
+    </header>    
+    
+    <div class="container-fluid">
+      <div class="row content">
+        <div class="col-sm-3 sidenav hidden-xs">
+          <ul class="nav nav-pills nav-stacked">
+            <li><a href="homepage.html">Dashboard</a></li>
+            <li class="active"><a href="InventorySystem.html">Inventory System</a></li>
+            <li><a href="Settings.html">Settings</a></li>
+            <li><a href="login.html">Logout</a></li>
+          </ul><br>
+          <p>&copy; StateMaster</p>
+        </div>
+        <br>
+
+        <div>   
+    <table class="tg">
+        <thead>
+          <tr>
+            <th class="tg-1" colspan="2"></th>
+            <th class="tg-1" colspan="2">Purchases</th>
+            <th class="tg-1" colspan="2">Sales</th>
+            <th class="tg-1" colspan="3">Balance</th>
+          </tr>
+        </thead>
+        <tbody id="dataRows">
+          <tr>
+            <td class="tg-2">Date</td>
+            <td class="tg-2">Product</td>
+            <td class="tg-2" id="QuantityCell">Quantity</td>
+            <td class="tg-2" id="pricePerUnitCell">Price Per Unit</td>
+            <td class="tg-2" id="QuantityCell01">Quantity</td>
+            <td class="tg-2" id="pricePerUnitCell01">Price Per Unit</td>
+            <td class="tg-2" id="TotalSCell">Total Spent</td>
+            <td class="tg-2" id="TotalECell">Total Earned</td>
+            <td class="tg-2" id="ProfitCell">Profits</td>
+          </tr>
+          <tr>
+            <td class="tg-3"></td>
+            <td class="tg-3"></td>
+            <td class="tg-3"></td>
+            <td class="tg-3"></td>
+            <td class="tg-3"></td>
+            <td class="tg-3"></td>
+            <td class="tg-3"></td>
+            <td class="tg-3"></td>
+            <td class="tg-3"></td>
+          </tr>
+          
+          <tr>
+            <td class="tg-4"></td>
+            <td class="tg-4"></td>
+            <td class="tg-4"></td>
+            <td class="tg-4"></td>
+            <td class="tg-4"></td>
+            <td class="tg-4"></td>
+            <td class="tg-4"></td>
+            <td class="tg-4"></td>
+            <td class="tg-4"></td>
+          </tr>
+          <tr>
+            <td class="tg-5"></td>
+            <td class="tg-5"></td>
+            <td class="tg-5"></td>
+            <td class="tg-5"></td>
+            <td class="tg-5"></td>
+            <td class="tg-5"></td>
+            <td class="tg-5"></td>
+            <td class="tg-5"></td>
+            <td class="tg-5"></td>
+          </tr>
+          <tr>
+            <td class="tg-6"></td>
+            <td class="tg-6"></td>
+            <td class="tg-6"></td>
+            <td class="tg-6"></td>
+            <td class="tg-6"></td>
+            <td class="tg-6"></td>
+            <td class="tg-6"></td>
+            <td class="tg-6"></td>
+            <td class="tg-6"></td>
+          </tr>
+          <tr>
+            <td class="tg-7"></td>
+            <td class="tg-7"></td>
+            <td class="tg-7"></td>
+            <td class="tg-7"></td>
+            <td class="tg-7"></td>
+            <td class="tg-7"></td>
+            <td class="tg-7"></td>
+            <td class="tg-7"></td>
+            <td class="tg-7"></td>
+          </tr>
+          <tr>
+            <td class="tg-8"></td>
+            <td class="tg-8"></td>
+            <td class="tg-8"></td>
+            <td class="tg-8"></td>
+            <td class="tg-8"></td>
+            <td class="tg-8"></td>
+            <td class="tg-8"></td>
+            <td class="tg-8"></td>
+            <td class="tg-8"></td>
+          </tr>
+          <tr>
+            <td class="tg-9"></td>
+            <td class="tg-9"></td>
+            <td class="tg-9"></td>
+            <td class="tg-9"></td>
+            <td class="tg-9"></td>
+            <td class="tg-9"></td>
+            <td class="tg-9"></td>
+            <td class="tg-9"></td>
+            <td class="tg-9"></td>
+          </tr>
+          <tr>
+            <td class="tg-10"></td>
+            <td class="tg-10"></td>
+            <td class="tg-10"></td>
+            <td class="tg-10"></td>
+            <td class="tg-10"></td>
+            <td class="tg-10"></td>
+            <td class="tg-10"></td>
+            <td class="tg-10"></td>
+            <td class="tg-10"></td>
+          </tr>
+          <tr>
+            <td class="tg-11"></td>
+            <td class="tg-11"></td>
+            <td class="tg-11"></td>
+            <td class="tg-11"></td>
+            <td class="tg-11"></td>
+            <td class="tg-11"></td>
+            <td class="tg-11"></td>
+            <td class="tg-11"></td>
+            <td class="tg-11"></td>
+          </tr>
+          <tr>
+            <td class="tg-12"></td>
+            <td class="tg-12"></td>
+            <td class="tg-12"></td>
+            <td class="tg-12"></td>
+            <td class="tg-12"></td>
+            <td class="tg-12"></td>
+            <td class="tg-12"></td>
+            <td class="tg-12"></td>
+            <td class="tg-12"></td>
+          </tr>
+          <tr>
+            <td class="tg-13"></td>
+            <td class="tg-13"></td>
+            <td class="tg-13"></td>
+            <td class="tg-13"></td>
+            <td class="tg-13"></td>
+            <td class="tg-13"></td>
+            <td class="tg-13"></td>
+            <td class="tg-13"></td>
+            <td class="tg-13"></td>
+          </tr>
+          <tr>
+            <td class="tg-14"></td>
+            <td class="tg-14"></td>
+            <td class="tg-14"></td>
+            <td class="tg-14"></td>
+            <td class="tg-14"></td>
+            <td class="tg-14"></td>
+            <td class="tg-14"></td>
+            <td class="tg-14"></td>
+            <td class="tg-14"></td>
+          </tr>
+          <tr>
+            <td class="tg-15"></td>
+            <td class="tg-15"></td>
+            <td class="tg-15"></td>
+            <td class="tg-15"></td>
+            <td class="tg-15"></td>
+            <td class="tg-15"></td>
+            <td class="tg-15"></td>
+            <td class="tg-15"></td>
+            <td class="tg-15"></td>
+          </tr>
+        </tbody>
+        </table>
+
+    <div class = "AddButton"> 
+        <button class="deleteButton">Delete</button>
+        <button id="add01" data-toggle="modal" data-target="#myModal">Add</button>
+    </div>
+
+
+</div>
+      </div>
+    </div>   
+    
+<!-- Add this at the end of your body tag -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Add Contents</h4>
+      </div>
+      <div class="modal-body">
+        <!-- Add your form or content for adding items here -->
+        <form>
+          <div class="form-group">
+            <label for="Date">Date</label>
+            <input type="date" id="Date" name="Date" class="form-control">
+            <label for="Product">Product</label>
+            <input type="text" id="Product" name="Product" class="form-control"><br>
+
+            <div class="form-group">
+              <label for="Purchases">PURCHASES</label><br>
+            
+              <label for="Quantity">Quantity</label>
+              <input type="text" id="Quantity" name="Quantity" class="form-control" oninput="updateTotal()">
+              <label for="Price">Price</label>
+              <input type="number" id="Price" name="Price" class="form-control" step="0.01" style="text-align: right;" placeholder="0.00" oninput="updateTotal()"><br>
+              <label for="Total">Total</label>
+              <input type="text" id="Total" name="Total" class="form-control" readonly><br>
+            </div>
+
+            <div class="form-group">
+              <label for="Purchases">SALES</label><br>
+            
+              <label for="Quantity">Quantity</label>
+              <input type="text" id="Quantity01" name="Quantity" class="form-control" oninput="updateTotal()">
+              <label for="Price01">Price</label>
+              <input type="number" id="Price01" name="Price01" class="form-control" step="0.01" style="text-align: right;" placeholder="0.00" oninput="updateTotal()"><br>
+              <label for="Total01">Total</label>
+              <input type="text" id="Total01" name="Total01" class="form-control" readonly><br>
+            </div>
+
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" onclick="saveData()">Save</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</div>
+
+    </body>
+</html>
